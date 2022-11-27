@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DepositCalculator {
 
-    double calculateComplexPercent(double a, double y,int d ) {
+    double calculateComplexPercent(double a, double y, int d) {
         double pay = a * Math.pow((1 + y / 12), 12 * d);
         return doRound(pay, 2);
     }
@@ -24,10 +24,10 @@ public class DepositCalculator {
         double out = 0;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите сумму вклада в рублях:") ;
+        System.out.println("Введите сумму вклада в рублях:");
         int amount = scanner.nextInt();
-        System.out.println("Введите срок вклада в годах:") ;
-        period = scanner.nextInt( );
+        System.out.println("Введите срок вклада в годах:");
+        period = scanner.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
         action = scanner.nextInt();
         if (action == 1) {
