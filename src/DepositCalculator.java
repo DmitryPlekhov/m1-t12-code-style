@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class DepositCalculator {
 
-    double calculateComplexPercent(double a, double y, int d) {
-        double pay = a * Math.pow((1 + y / 12), 12 * d);
-        return doRound(pay, 2);
+    double calculateComplexPercent(double a, double y, int d) { //я бы переименовал эти методы в более понятные типа calculateWithCompounding
+        double pay = a * Math.pow((1 + y / 12), 12 * d); //здесь, мне кажется, также стоит параметры прописать словами, вместо a, y и d 
+        return doRound(pay, 2); //можно просто round, это тоже глагол будет
+        //return по канонам, вроде, должен быть с отбивкой строки
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
@@ -18,7 +19,7 @@ public class DepositCalculator {
         return Math.round(value * scale) / scale;
     }
 
-    void Calculate() {
+    void Calculate() {//с маленькой буквы по идее должно быть, это же метод
         int period;
         int action;
         double out = 0;
